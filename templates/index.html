@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Set up
+{% endblock %}
+
+{% block main %}
+<form action="/" method="post">
+
+    <div class="form-group">
+        <input autocomplete="off" autofocus class="form-control" name="pages" placeholder="number of pages to scrape"
+            type="text">
+    </div>
+
+    <div class="form-check">
+        <input class="form-check-input" name="standart_table" type="checkbox" value="1" id="standart_table">
+        <label class="form-check-label" for="standart_table">
+            Use data from 20.03.2021 (0s scrape time)
+        </label>
+    </div>
+    <p></p>
+
+    <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+{% endblock %}

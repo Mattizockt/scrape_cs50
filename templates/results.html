@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Set up
+{% endblock %}
+
+{% block main %}
+<form action="/results" method="post">
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Type</th>
+                <th scope="col">POSTS</th>
+                <th scope="col">TITELS</th>
+                <th scope="col">VOTES</th>
+                <th scope="col">LABELS</th>
+                <th scope="col">WEEKDAY</th>
+                <th scope="col">TIME</th>
+                <th scope="col">AUTHORS</th>
+                <th scope="col">COMMENTS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="col">Total</th>
+                <th scope="col">
+                    {{result[0][0]}}
+                </th>
+                <th scope="col"></th>
+                <th scope="col">
+                    {{result[1][0]}}
+                </th>
+                <th scope="col">{{result[2][0]}}</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col">
+                    {{result[3][0]}}
+                </th>
+                <th scope="col">
+                    {{result[4][0]}}
+                </th>
+            </tr>
+
+            <tr>
+                <th scope="col">Average</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col">
+                    {{result[5][0]}}
+                </th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col">
+                </th>
+                <th scope="col"></th>
+                <th scope="col">
+                    {{result[6][0]}}
+                </th>
+            </tr>
+            <tr>
+                <th scope="col">Mode</th>
+                <th scope="col"></th>
+                <th scope="col">
+                    <button name="modus" type="submit" value="modus_titles">
+                        <p><u>Word:</u> "{{result[7][0]}}"</p>
+                        <p><u>Occ.:</u> {{result[7][1]}}</p>
+
+                    </button>
+                </th>
+                <th scope="col">
+                    <button name="modus" type="submit" value="modus_votes">
+                        <p><u>Votes:</u> {{result[8][0]}}</p>
+                        <p><u>Author:</u> {{result[8][1]}}</p>
+                        <p><u>Title:</u> {{result[8][2]}}</p>
+                    </button>
+                </th>
+                <th scope="col">
+                    <button name="modus" type="submit" value="modus_labels">
+                        <p><u>Label:</u> {{result[9][0]}}</p>
+                        <p><u>Occ.:</u> {{result[9][1]}}</p>
+                    </button>
+                </th>
+                <th scope="col">
+                    <button name="modus" type="submit" value="modus_weekdays">
+                        <p><u>Weekday:</u> {{result[10][0]}}</p>
+                        <p><u>Occ.:</u> {{result[10][1]}}</p>
+
+                    </button>
+                </th>
+                <th scope="col">
+                    <button name="modus" type="submit" value="modus_hours">
+                        <p><u>Hour:</u> {{result[11][0]}}</p>
+                        <p><u>Posts:</u> {{result[11][1]}}</p>
+                    </button>
+                </th>
+                <th scope="col">
+                    <button name="modus" type="submit" value="modus_authors">
+                        <p><u>Authors</u>: {{result[12][0]}}</p>
+                        <p><u>Posts:</u> {{result[12][1]}}</p>
+                    </button>
+                </th>
+                <th scope="col">
+                    <button name="modus" type="submit" value="modus_comments">
+                        <p><u>Comments:</u> {{result[13][0]}}</p>
+                        <p><u>Title:</u> {{result[13][1]}}</p>
+                        <p><u>Author:</u> {{result[13][2]}}</p>
+                    </button>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+</form>
+{% endblock %}

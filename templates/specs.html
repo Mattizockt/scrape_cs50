@@ -1,0 +1,143 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Set up
+{% endblock %}
+
+{% block main %}
+<form action="/specs" method="post">
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Type</th>
+                <th scope="col">ID</th>
+                <th scope="col">TITELS</th>
+                <th scope="col">VOTES</th>
+                <th scope="col">LABELS</th>
+                <th scope="col">WEEKDAY</th>
+                <th scope="col">TIME</th>
+                <th scope="col">AUTHORS</th>
+                <th scope="col">COMMENTS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="col">Total
+                </th>
+                <th scope="col">
+                    <div class="form-check">
+                        <input class="form-check-input" name="total_ids" type="checkbox" value="True" id="total_ids">
+                    </div>
+                </th>
+                <th scope="col"></th>
+                <th scope="col">
+                    <div class="form-check">
+                        <input class="form-check-input" name="total_votes" type="checkbox" value="True"
+                            id="total_votes">
+                    </div>
+                </th>
+                <th scope="col">
+                    <div class="form-check">
+                        <input class="form-check-input" name="total_labels" type="checkbox" value="True"
+                            id="total_labels">
+                    </div>
+                </th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col">
+                    <div class="form-check">
+                        <input class="form-check-input" name="total_authors" type="checkbox" value="True"
+                            id="total_authors">
+                    </div>
+                </th>
+                <th scope="col">
+                    <div class="form-check">
+                        <input class="form-check-input" name="total_comments" type="checkbox" value="True"
+                            id="total_comments">
+                    </div>
+                </th>
+            </tr>
+
+            <tr>
+                <th scope="col">Average</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col">
+                    <div class="form-check">
+                        <input class="form-check-input" name="average_votes" type="checkbox" value="True"
+                            id="average_votes">
+                    </div>
+                </th>
+                <th scope="col"></th>
+                <th scope="col">
+                </th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col">
+                    <div class="form-check">
+                        <input class="form-check-input" name="modus_titles" type="checkbox" value="True"
+                            id="average_comments">
+                    </div>
+                </th>
+            </tr>
+
+            <tr>
+                <th scope="col">Mode</th>
+                <th scope="col">
+                </th>
+                <th scope="col">
+                    <div class="form-check">
+                        <input class="form-check-input" name="modus_titles" type="checkbox" value="True"
+                            id="modus_titles">
+                    </div>
+                </th>
+                <th scope="col">
+                    <div class="form-check">
+                        <input class="form-check-input" name="modus_votes" type="checkbox" value="True"
+                            id="modus_votes">
+                    </div>
+                </th>
+                <th scope="col">
+                    <div class="form-check">
+                        <input class="form-check-input" name="modus_labels" type="checkbox" value="True"
+                            id="modus_labels">
+                    </div>
+                </th>
+                <th scope="col">
+                    <div class="form-check">
+                        <input class="form-check-input" name="modus_weekdays" type="checkbox" value="True"
+                            id="modus_weekdays">
+                    </div>
+                </th>
+                <th scope="col">
+                    <div class="form-check">
+                        <input class="form-check-input" name="modus_hours" type="checkbox" value="True"
+                            id="modus_hours">
+                    </div>
+                </th>
+                <th scope="col">
+                    <div class="form-check">
+                        <input class="form-check-input" name="modus_authors" type="checkbox" value="True"
+                            id="modus_authors">
+                    </div>
+                </th>
+                <th scope="col">
+                    <div class="form-check">
+                        <input class="form-check-input" name="modus_comments" type="checkbox" value="True"
+                            id="modus_comments">
+                    </div>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+
+    <p class="form-check">
+        <input class="form-check-input" name="calc_all" type="checkbox" value="1" id="calc_all">
+        <label class="form-check-label" for="calc_all">
+            CALCULATE ALL
+        </label>
+    </p>
+
+    <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+{% endblock %}

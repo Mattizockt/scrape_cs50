@@ -1,0 +1,46 @@
+# **CS50-subreddit**
+### **Video Demo** :https://www.youtube.com/watch?v=F3eAxm8xfJU&t=34s
+
+My project "CS50-Reddit" retrieves information from the cs50-subreddit.
+To implement my project, I utilized python and sqlite3.
+Python-frameworks "selenium" and "flask" are mandatory as well.
+
+How does my webpage work?
+
+1.	Input number of pages you want to read data from. max pages -> 40. DON'T CLOSE THE OPENED WINDOW!
+
+2.	I takes up to 3 min. to retrieve data
+    Instead: click the checkbox under the input field
+        -> it will use database I have made in advance.
+
+3.	After successful data collecting
+     -> redirected to a new page.
+    Check calculations you want to perform or check "calculate all".
+    You can choose from 3 categories: "TOTAL", "AVERAGE", "MODUS"
+
+4.  redirected to a new page.
+A
+5.  You can click on every result in the "MODUS"-row as well
+    -> this way, you can see the 2nd, 3rd, 4th too
+
+What can I calculate?
+TOTAL:
+    ***total posts
+    total votes
+    total labels
+    total (distinct) authors
+    total comments***
+AVERAGE:
+    ***average votes per post
+    average comments per post***
+MODUS:
+    ***most common word
+    most upvoted post
+    most common label
+    most common weekday
+    most common hour (e.g. 3am, 4pm)
+    author with most posts
+    most commented post***
+
+**Requirements**:
+	flask, selenium, chromedriver, sqlite3

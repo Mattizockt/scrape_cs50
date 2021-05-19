@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Set up
+{% endblock %}
+
+{% block main %}
+<table class="table">
+    <thead>
+        <th scope="col">Rank</th>
+        {% for element in titles %}
+        <th scope="col">{{element}}</th>
+        {% endfor %}
+    </thead>
+    <tbody>
+        {% for element in value %}
+        <tr>
+            <td>{{loop.index}}</td>
+            {% for i in element %}
+            <td>{{i}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
